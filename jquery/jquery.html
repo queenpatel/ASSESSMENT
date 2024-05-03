@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 60%;
+            height: 350px;
+            border: 2px solid black;
+        }
+
+        button {
+            width: 10%;
+            height: 40px;
+            background-color: black;
+            border-radius: 3px;
+            color: white;
+            border: 2px solid rgb(94, 93, 93);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box">
+            <img class="img1" style="display: block; height: 350px; width: 100%;"
+                src="../../HTML_CSS/Images/1.webp" alt="">
+            <img style="display: none; height: 350px; width: 100%;" class="img2"
+                src="../../HTML_CSS/Images/background2.jpeg" alt="">
+            <img style="display: none;height: 350px; width: 100%;" class="img3"
+                src="../../HTML_CSS/Images/backgroundAnimation.avif" alt="">
+        </div><br><br>
+        <button onclick="changeme()">Click me</button>
+    </div>
+
+    <script>
+        const img1 = document.querySelector(".img1");
+        const img2 = document.querySelector(".img2");
+        const img3 = document.querySelector(".img3");
+
+        function changeme() {
+            if (img1.style.display === "block") {
+                img2.style.display = 'block';
+                img1.style.display = 'none';
+            } else {
+                img3.style.display = 'block';
+                img2.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
